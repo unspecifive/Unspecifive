@@ -13,9 +13,7 @@ const path            = require('path'),
 
 module.exports.init = function() {
   //connect to database
-  mongoose.connect(config.db.uri, {
-    useMongoClient: true
-  });
+  mongoose.connect(config.db.uri, { useNewUrlParser: true, useCreateIndex: true});
 
   //initialize app
   var app = express();
