@@ -1,15 +1,21 @@
-var path = require('path'),  
-    express = require('express'), 
-    mongoose = require('mongoose'),
-    morgan = require('morgan'),
-    bodyParser = require('body-parser'),
-    config = require('./config'),
-    listingsRouter = require('../routes/listings.server.routes');
-    cors=require('cors');
+const path            = require('path'),  
+    express           = require('express'), 
+    mongoose          = require('mongoose'),
+    morgan            = require('morgan'),
+    bodyParser        = require('body-parser'),
+    config            = require('./config'),
+    parkingLotsRouter = require('../routes/parkingLots.server.routes'),
+    userRouter        = require('../routes/users.server.routes'),
+    cors              = require('cors'),
+    passport          = require('passport'),
+    LocalStrategy     = require('passport-local').Strategy,
+    User              = require('../models/userSchema');
 
 module.exports.init = function() {
   //connect to database
-  mongoose.connect(config.db.uri);
+  mongoose.connect(config.db.uri, {
+    useMongoClient: true
+  });
 
   //initialize app
   var app = express();
@@ -18,20 +24,32 @@ module.exports.init = function() {
   app.use(morgan('dev'));
 
   //body parsing middleware 
+  app.use(bodyParser.urlencoded({
+    extended: true
+  }));
   app.use(bodyParser.json());
-  app.use(cors());
 
+  app.use(cors());
   
-  /**TODO
-  Serve static files */
   app.use(express.static('client/'));
 
-  /**TODO 
-  Use the listings router for requests to the api */
-  app.use('/api/listings',listingsRouter);
+  // Passport initialization and set up
+  app.use(require('express-session')({
+    secret: 'keyboard cat',
+    resave: false,
+    saveUninitialized: false
+  }));
+  app.use(passport.initialize());
+  app.use(passport.session());
 
-  /**TODO 
-  Go to homepage for all routes not specified */ 
+  // Passport config
+  passport.use(new LocalStrategy(User.authenticate()));
+  passport.serializeUser(User.serializeUser());
+  passport.deserializeUser(User.deserializeUser());
+ 
+  app.use('/api/user', userRouter);
+  app.use('/api/parkingLots', parkingLotsRouter);
+
   app.route('*', function (req, res) {
     res.sendFile("/index.html");
   });
