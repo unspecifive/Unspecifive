@@ -1,7 +1,6 @@
 
 /* Dependencies */
-var mongoose = require('mongoose'), 
-    Listing = require('../models/listings.server.model.js');
+var mongoose = require('mongoose');
 
 /*
   In this file, you should use Mongoose queries in order to retrieve/add/remove/update listings.
