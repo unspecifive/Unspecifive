@@ -4,6 +4,7 @@ const bcrypt   = require('bcrypt');
 const jwt      = require('jsonwebtoken');
 
 exports.create = (req, res) => {
+    // first find the user so it can check if email already exists
     User.findOne({email: req.body.email}, (err, user) => {
         if(user) {
             return res.status(409).json({
@@ -17,6 +18,7 @@ exports.create = (req, res) => {
                         error: err
                     });
                 } else {
+                    // create new user object
                     const user = new User({
                         _id: new mongoose.Types.ObjectId,
                         name: req.body.name,
@@ -25,6 +27,7 @@ exports.create = (req, res) => {
                         password: hash,
                         parkingDecalCode: req.body.parkingDecalCode
                     });
+                    // save newly created user
                     user.save((err, result) => {
                         if(err) {
                             console.log(err);
@@ -45,6 +48,7 @@ exports.create = (req, res) => {
 };
 
 exports.login = (req, res) => {
+    // find user so its hash can be used to compare with the plaintext password later
     User.findOne({email: req.body.email}, (err, user) => {
         if(err) {
             console.log(err);
@@ -57,6 +61,7 @@ exports.login = (req, res) => {
                 message: 'User not found'
             });
         }
+        // compares plaintext password with hash from db
         bcrypt.compare(req.body.password, user.password, (err, isMatch) => {
             if(err) {
                 console.log(err)
