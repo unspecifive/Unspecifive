@@ -45,6 +45,7 @@ exports.create = (req, res) => {
 };
 
 exports.login = (req, res) => {
+    // looks for user in database so hash can be retrieved and used to check if password is correct
     User.findOne({email: req.body.email}, (err, user) => {
         if(err) {
             console.log(err);
@@ -57,6 +58,7 @@ exports.login = (req, res) => {
                 message: 'User not found'
             });
         }
+        // compares plaintext password passed in by user with hash stored in database
         bcrypt.compare(req.body.password, user.password, (err, isMatch) => {
             if(err) {
                 console.log(err)
@@ -65,7 +67,7 @@ exports.login = (req, res) => {
                 });
             }
             if(isMatch) {
-                // generate a token for the client upon successful log in
+                // generate a token for the client upon successful password match
                 const token = jwt.sign(
                     {
                     email: user.email,
