@@ -1,6 +1,7 @@
 module.exports = {
   db: {
-    uri: 'mongodb://admin:iamadmin69@ds249123.mlab.com:49123/parking-picker',
+    uri: 'mongodb://dbuser:unspecifivepassword1@ds040089.mlab.com:40089/unspecifive',
   },
-  port: process.env.PORT || 8080
+  port: process.env.PORT || 8080,
+  jwtKey: "secret_boi"
 };
