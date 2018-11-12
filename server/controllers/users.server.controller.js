@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 const User     = require('../models/userSchema');
 const bcrypt   = require('bcrypt');
 const jwt      = require('jsonwebtoken');
+const config   = require('../config/config.js');
 
 exports.create = (req, res) => {
     // first find the user so it can check if email already exists
@@ -76,7 +77,7 @@ exports.login = (req, res) => {
                     email: user.email,
                     userId: user._id
                     },
-                    'secret_key',
+                    config.jwtKey,
                     {
                         expiresIn: "1h"
                     }
@@ -94,8 +95,24 @@ exports.login = (req, res) => {
     })
 };
 
+exports.authenticate_token = (req, res, next) => {
+    var token = req.headers['x-access-token'];
+    if (!token) {
+        res.status(401).send("Please provide a token to access this endpoint");
+    } else {
+        jwt.verify(token, config.jwtKey, function(err, body) {
+            if(err) {
+                res.status(500).send("Token was invalid, please login again to get a valid token");
+            } else {
+                req.user = body;
+                next();
+            }
+        });
+    }
+};
+
 exports.delete = (req, res) => {
-    User.findByIdAndRemove(req.params.userId, (err, result) => {
+    User.findByIdAndRemove(req.user.userId, (err, result) => {
         if(err) {
             console.log(err);
             res.status(500).json({
@@ -106,4 +123,8 @@ exports.delete = (req, res) => {
             message: 'User deleted'
         });
     });
+};
+
+exports.who_am_i = (req, res) => {
+    res.status(200).json(req.user);
 };
