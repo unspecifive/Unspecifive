@@ -28,9 +28,24 @@
           </div>
 
       </md-toolbar>
-      
+
       <div id='map' style='width: 100%; height: 100%;'>
           <script src="map.js"></script>
+      </div>
+
+      <!-- Decal Selection Button-->
+      <div class="decal-selection">
+        <div class="dropdown">
+          <button class="dropbtn">{{decalColor}}</button>
+          <div class="dropdown-content">
+            <button ng-click="setDecalColor('Red')">Red</button>
+            <button ng-click="setDecalColor('Blue')">Blue</button>
+            <button ng-click="setDecalColor('Yellow')">Yellow</button>
+            <button ng-click="setDecalColor('Green')">Grenn</button>
+            <button ng-click="setDecalColor('Orange')">Orange</button>
+            <button ng-click="setDecalColor('Any')">Any</button>
+          </div>
+        </div>
       </div>
 
       <!-- SIDEBAR -->
@@ -133,12 +148,12 @@
           </div>
         </md-sidenav>
 
-        
+
         <!-- MAP -->
         <md-content flex id="map"></md-content>
-        
+
       </section>
-        
-  
+
+
   </body>
 </html>
