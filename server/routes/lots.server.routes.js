@@ -19,6 +19,9 @@ router.route('/create')
 router.route('/getLotsByFilter')
     .post(lots.getLotsByFilters);
 
+router.route('/getLotByCode/:lotCode')
+    .get(lots.getLot);
+
 //middleware to retrieve the lot by its lotCode when a request has that parameter
 router.param('lotCode', lots.lotByCode);
 

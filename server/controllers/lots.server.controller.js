@@ -13,6 +13,16 @@ exports.lotByCode = function(req, res, next, code) {
     })
 };
 
+exports.getLot = (req, res) => {
+    ParkingLot.findOne({code: req.parkingLot.code}, function(err, lot) {
+        if(err) {
+            res.status(500).send(err);
+        } else {
+            res.json(lot);
+        }
+    })
+};
+
 exports.findAll = (req, res) => {
     ParkingLot.find({},(err, lots) => {
         if(err) {
