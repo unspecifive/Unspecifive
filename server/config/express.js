@@ -5,6 +5,7 @@ const path            = require('path'),
     bodyParser        = require('body-parser'),
     config            = require('./config'),
     userRouter        = require('../routes/users.server.routes'),
+    lotRouter         = require('../routes/lots.server.routes'),
     cors              = require('cors'),
     passport          = require('passport'),
     LocalStrategy     = require('passport-local').Strategy,
@@ -47,6 +48,8 @@ module.exports.init = function() {
  
   app.use('/api/user', userRouter);
   //app.use('/api/parkingLots', parkingLotsRouter);
+
+  app.use('/api/parkinglots', lotRouter);
 
   app.route('*', function (req, res) {
     res.sendFile("/index.html");

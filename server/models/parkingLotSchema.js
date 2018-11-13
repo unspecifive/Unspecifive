@@ -17,14 +17,15 @@ var parkingLotSchema = new Schema({
             required: true
         }],
         startTime: {
-            type: Date,
+            type: Number,
             required: true
         },
         endTime: {
-            type: Date,
+            type: Number,
             required: true
         }
     }],
+    decals: [String],
     percentFull: {
         type: Number,
         min: 0,
@@ -35,16 +36,23 @@ var parkingLotSchema = new Schema({
         type: Date,
         required: true
     },
-    boundaryCoordinates: [{//list of coordinate points which define the boundary
-        latitude: {
-            type: Number,
-            required: true
+    lastUpdatedByUser: {
+        type: String,
+        required: true
+    },
+    centerCoordinate: [Number],//[longitude, latitude]
+    mapBoxInfo: {
+        type : {type: String},
+        properties : {
+            name: String,
+            fill: String,
+            stroke: String
         },
-        longitude: {
-            type: Number,
-            required: true
+        geometry: {
+            type: {type: String},
+            coordinates:[[[]]]
         }
-    }]
+    }
 });
 
 
