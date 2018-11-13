@@ -104,15 +104,21 @@ exports.authenticate_token = (req, res, next) => {
             if(err) {
                 res.status(500).send("Token was invalid, please login again to get a valid token");
             } else {
-                req.user = body;
-                next();
+                User.findOne({_id: body.userId}, function(err, user) {
+                    if(err) {
+                        res.status(500).send(err);
+                    } else {
+                        req.user = user;
+                        next();
+                    }
+                });
             }
         });
     }
 };
 
 exports.delete = (req, res) => {
-    User.findByIdAndRemove(req.user.userId, (err, result) => {
+    User.findByIdAndRemove(req.user._id, (err, result) => {
         if(err) {
             console.log(err);
             res.status(500).json({
