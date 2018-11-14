@@ -6,6 +6,9 @@ app.controller('ParkingLotsController', function ($scope, $mdSidenav, $mdDialog)
     $scope.toggleLeft = buildToggler('left');
     $scope.toggleRight = buildToggler('right');
     $scope.decalColor = "Any";
+    $scope.color = {
+      red: Math.floor(Math.random() * 100)
+    };
 
     function buildToggler(componentId) {
       return function() {

@@ -9,7 +9,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.5/angular-aria.min.js"></script>
     <script src='https://api.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.js'></script>
     <script src="app.js"></script>
-    <script src="compareTo.directive.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.10/angular-material.css">
@@ -52,9 +51,21 @@
       <section layout="row" flex id="content">
         <md-sidenav class="md-sidenav-left" md-component-id="left" md-disable-backdrop md-whiteframe="4">
           <md-toolbar class="md-theme-indigo">
-            <h1 class="md-toolbar-tools">Parking Lot detailed information</h1>
+            <h1 class="md-toolbar-tools">Parking Lot Details</h1>
           </md-toolbar>
           <md-content layout-margin>
+            
+            <h4>How full is this parking lot?</h4>
+            <md-slider-container>
+              <span class="md-body-1"></span>
+              <md-slider ng-model="color.red" min="0" max="100" aria-label="red" id="red-slider" class="md-warn">
+                
+              </md-slider>
+              <md-input-container>
+                <input type="number" ng-model="color.red" aria-label="red-slider">
+              </md-input-container>
+            </md-slider-container>
+            <md-button type="submit" class="md-accent">Submit</md-button>
             <p>
               Parking lot availability information.
             </p>
@@ -81,7 +92,7 @@
                   <label>Password</label>
                   <input type="password" class="form-control">
                 </div>
-                <button type="submit" class="btn btn-default">Submit</button>
+                <button type="submit" ng-click="toggleRight()" class="btn btn-default">Submit</button>
                 <md-button ng-click="isAccountOpen = !isAccountOpen" class="md-accent">
                   Create Account
                 </md-button>
@@ -137,7 +148,7 @@
                     <md-option value="commercial">Commercial</md-option>
                   </md-select>
                 </div>
-                <button type="submit" class="btn btn-default">Submit</button>
+                <button type="submit" ng-click="toggleRight()" class="btn btn-default">Submit</button>
                 <md-button ng-click="isAccountOpen = !isAccountOpen" class="md-accent">
                   Login
                 </md-button>
