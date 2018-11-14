@@ -2570,8 +2570,8 @@ mapboxgl.accessToken = 'pk.eyJ1IjoicmlzaGkzMzMiLCJhIjoiY2puMXE1M2ptMXR0aDNrdG45M
 var map = new mapboxgl.Map({
 container: 'map',
 style: 'mapbox://styles/rishi333/cjobvnk7v1l4o2so6l78uxyhr',
-center: [-82.355133, 29.65],
-zoom: 13,
+center: [-82.3557818, 29.6449564],
+zoom: 15,
 });
 map.on('load', function () {
     map.addSource('lotsource', {
