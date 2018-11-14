@@ -6,6 +6,7 @@ var lots1={
         "properties": {
           "name": 1,
           "fill": "orange",
+          "color":"Orange",
           "full": "40%"
         },
         "geometry": {
@@ -41,6 +42,7 @@ var lots1={
         "properties": {
           "name": 2,
           "fill": "blue",
+          "color": "Blue",
           "full": "50%"
         },
         "geometry": {
@@ -84,6 +86,7 @@ var lots1={
         "properties": {
           "name": "3",
           "fill": "blue",
+          "color": "Blue",
           "full": "20%"
         },
         "geometry": {
@@ -119,6 +122,7 @@ var lots1={
         "properties": {
           "name": "4",
           "fill": "orange",
+          "color": "Orange",
           "full": "80%"
         },
         "geometry": {
@@ -154,6 +158,7 @@ var lots1={
         "properties": {
           "name": "5",
           "fill": "orange",
+          "color": "Orange",
           "full": "60%"
         },
         "geometry": {
@@ -189,6 +194,7 @@ var lots1={
         "properties": {
           "name": "6",
           "fill": "orange",
+          "color": "Orange",
           "full": "100%"
         },
         "geometry": {
@@ -224,6 +230,7 @@ var lots1={
         "properties": {
           "name": "7",
           "fill": "red",
+          "color": "Red",
           "full": "10%"
         },
         "geometry": {
@@ -258,7 +265,8 @@ var lots1={
         "type": "Feature",
         "properties": {
           "name": 8,
-          "fill": "white",
+          "fill": "#ff8080",
+          "color": "Red-One",
           "full": "30%"
         },
         "geometry": {
@@ -302,6 +310,7 @@ var lots1={
         "properties": {
           "name": "9",
           "fill": "orange",
+          "color": "Orange",
           "full": "50%"
         },
         "geometry": {
@@ -337,6 +346,7 @@ var lots1={
         "properties": {
           "name": "10",
           "fill": "purple",
+          "color": "Purple",
           "full": "80%"
         },
         "geometry": {
@@ -372,6 +382,7 @@ var lots1={
         "properties": {
           "name": "11",
           "fill": "purple",
+          "color": "Purple",
           "full": "20%"
         },
         "geometry": {
@@ -407,6 +418,7 @@ var lots1={
         "properties": {
           "name": "12",
           "fill": "purple",
+          "color": "Purple",
           "full": "90%"
         },
         "geometry": {
@@ -458,6 +470,7 @@ var lots1={
         "properties": {
           "name": "13",
           "fill": "orange",
+          "color": "Orange",
           "full": "20%"
         },
         "geometry": {
@@ -493,6 +506,7 @@ var lots1={
         "properties": {
           "name": "14",
           "fill": "orange",
+          "color": "Orange",
           "full": "10%"
         },
         "geometry": {
@@ -548,6 +562,7 @@ var lots1={
         "properties": {
           "name": "15",
           "fill": "orange",
+          "color": "Orange",
           "full": "40%"
         },
         "geometry": {
@@ -583,6 +598,7 @@ var lots1={
         "properties": {
           "name": "16",
           "fill": "orange",
+          "color": "Orange",
           "full": "40%"
         },
         "geometry": {
@@ -633,7 +649,8 @@ var lots1={
         "type": "Feature",
         "properties": {
           "name": "17",
-          "fill": "white",
+          "fill": "#ff8080",
+          "color": "Red-One",
           "full": "70%"
         },
         "geometry": {
@@ -668,7 +685,8 @@ var lots1={
         "type": "Feature",
         "properties": {
           "name": "18",
-          "fill": "white",
+          "fill": "#ff8080",
+          "color": "Red-One",
           "full": "30%"
         },
         "geometry": {
@@ -712,6 +730,7 @@ var lots1={
         "properties": {
           "name": "19",
           "fill": "orange",
+          "color": "Orange",
           "full": "40%"
         },
         "geometry": {
@@ -747,6 +766,7 @@ var lots1={
         "properties": {
           "name": "20",
           "fill": "orange",
+          "color": "Orange",
           "full": "80%"
         },
         "geometry": {
@@ -781,7 +801,8 @@ var lots1={
         "type": "Feature",
         "properties": {
           "name": "21",
-          "fill": "white",
+          "fill": "#ff8080",
+          "color": "Red-One",
           "full": "60%"
         },
         "geometry": {
@@ -816,7 +837,8 @@ var lots1={
         "type": "Feature",
         "properties": {
           "name": "22",
-          "fill": "white",
+          "fill": "#ff8080",
+          "color": "Red-One",
           "full": "90%"
         },
         "geometry": {
@@ -871,7 +893,8 @@ var lots1={
         "type": "Feature",
         "properties": {
           "name": "23",
-          "fill": "white",
+          "fill": "#d2a679",
+          "color": "Brown-Three",
           "full": "100%"
         },
         "geometry": {
@@ -947,6 +970,7 @@ var lots1={
         "properties": {
           "name": "24",
           "fill": "purple",
+          "color": "Purple",
           "full": "40%"
         },
         "geometry": {
@@ -982,6 +1006,7 @@ var lots1={
         "properties": {
           "name": "25",
           "fill": "violet",
+          "color": "Visitor",
           "full": "10%"
         },
         "geometry": {
@@ -1017,6 +1042,7 @@ var lots1={
         "properties": {
           "name": "26",
           "fill": "purple",
+          "color": "Purple",
           "full": "20%"
         },
         "geometry": {
@@ -1051,7 +1077,8 @@ var lots1={
         "type": "Feature",
         "properties": {
           "name": "27",
-          "fill": "white",
+          "fill": "#ffccff",
+          "color": "Shands",
           "full": "30%"
         },
         "geometry": {
@@ -1087,6 +1114,7 @@ var lots1={
         "properties": {
           "name": "28",
           "fill": "violet",
+          "color": "Visitor",
           "full": "50%"
         },
         "geometry": {
@@ -1122,6 +1150,7 @@ var lots1={
         "properties": {
           "name": "29",
           "fill": "red",
+          "color": "Red",
           "full": "20%"
         },
         "geometry": {
@@ -1165,6 +1194,7 @@ var lots1={
         "properties": {
           "name": "30",
           "fill": "green",
+          "color": "Green",
           "full": "70%"
         },
         "geometry": {
@@ -1200,6 +1230,7 @@ var lots1={
         "properties": {
           "name": "31",
           "fill": "orange",
+          "color": "Orange",
           "full": "50%"
         },
         "geometry": {
@@ -1267,6 +1298,7 @@ var lots1={
         "properties": {
           "name": "32",
           "fill": "orange",
+          "color": "Orange",
           "full": "80%"
         },
         "geometry": {
@@ -1358,6 +1390,7 @@ var lots1={
         "properties": {
           "name": "33",
           "fill": "orange",
+          "color": "Orange",
           "full": "90%"
         },
         "geometry": {
@@ -1453,6 +1486,7 @@ var lots1={
         "properties": {
           "name": "34",
           "fill": "purple",
+          "color": "Purple",
           "full": "40%"
         },
         "geometry": {
@@ -1488,6 +1522,7 @@ var lots1={
         "properties": {
           "name": 35,
           "fill": "violet",
+          "fill": "Visitor",
           "full": "70%"
         },
         "geometry": {
@@ -1523,6 +1558,7 @@ var lots1={
         "properties": {
           "name": "36",
           "fill": "orange",
+          "color": "Orange",
           "full": "80%"
         },
         "geometry": {
@@ -1558,6 +1594,7 @@ var lots1={
         "properties": {
           "name": "37",
           "fill": "orange",
+          "color": "Orange",
           "full": "10%"
         },
         "geometry": {
@@ -1593,6 +1630,7 @@ var lots1={
         "properties": {
           "name": "38",
           "fill": "purple",
+          "color": "Purple",
           "full": "100%"
         },
         "geometry": {
@@ -1627,7 +1665,8 @@ var lots1={
         "type": "Feature",
         "properties": {
           "name": "39",
-          "fill": "white",
+          "fill": "#ff8080",
+          "color": "Red-One",
           "full": "30%"
         },
         "geometry": {
@@ -1663,6 +1702,7 @@ var lots1={
         "properties": {
           "name": "40",
           "fill": "orange",
+          "color": "Orange",
           "full": "50%"
         },
         "geometry": {
@@ -1697,7 +1737,8 @@ var lots1={
         "type": "Feature",
         "properties": {
           "name": "42",
-          "fill": "white",
+          "fill": "#ff8080",
+          "color": "Red-One",
           "full": "20%"
         },
         "geometry": {
@@ -1733,6 +1774,7 @@ var lots1={
         "properties": {
           "name": "43",
           "fill": "purple",
+          "color": "Purple",
           "full": "60%"
         },
         "geometry": {
@@ -1763,854 +1805,138 @@ var lots1={
           ]
         }
       },
-      {
-        "type": "Feature",
-        "properties": {
-          "stroke": "red",
-          "name": 8
-        },
-        "geometry": {
-          "type": "LineString",
-          "coordinates": [
-            [
-              -82.33735799789429,
-              29.64570307130495
-            ],
-            [
-              -82.33723729848862,
-              29.64575901791982
-            ]
-          ]
-        }
-      },
-      {
-        "type": "Feature",
-        "properties": {
-          "stroke": "red",
-          "name": 8
-        },
-        "geometry": {
-          "type": "LineString",
-          "coordinates": [
-            [
-              -82.33735263347626,
-              29.645563204631774
-            ],
-            [
-              -82.33723193407059,
-              29.645616820212798
-            ]
-          ]
-        }
-      },
-      {
-        "type": "Feature",
-        "properties": {
-          "stroke": "red",
-          "name": 8
-        },
-        "geometry": {
-          "type": "LineString",
-          "coordinates": [
-            [
-              -82.33735531568527,
-              29.645414013299526
-            ],
-            [
-              -82.33723729848862,
-              29.64545830449935
-            ]
-          ]
-        }
-      },
-      {
-        "type": "Feature",
-        "properties": {
-          "stroke": "red",
-          "name": 8
-        },
-        "geometry": {
-          "type": "LineString",
-          "coordinates": [
-            [
-              -82.33735531568527,
-              29.645243841666275
-            ],
-            [
-              -82.33723729848862,
-              29.645288132940983
-            ]
-          ]
-        }
-      },
-      {
-        "type": "Feature",
-        "properties": {
-          "stroke": "red",
-          "name": 8
-        },
-        "geometry": {
-          "type": "LineString",
-          "coordinates": [
-            [
-              -82.33745455741882,
-              29.64504103400163
-            ],
-            [
-              -82.3372346162796,
-              29.645145934568845
-            ]
-          ]
-        }
-      },
-      {
-        "type": "Feature",
-        "properties": {
-          "stroke": "red",
-          "name": 21
-        },
-        "geometry": {
-          "type": "LineString",
-          "coordinates": [
-            [
-              -82.33862936496735,
-              29.64382651058732
-            ],
-            [
-              -82.33842015266418,
-              29.643933743570575
-            ]
-          ]
-        }
-      },
-      {
-        "type": "Feature",
-        "properties": {
-          "stroke": "red",
-          "name": 21
-        },
-        "geometry": {
-          "type": "LineString",
-          "coordinates": [
-            [
-              -82.33861863613129,
-              29.644096923978182
-            ],
-            [
-              -82.33841478824614,
-              29.64418550751724
-            ]
-          ]
-        }
-      },
-      {
-        "type": "Feature",
-        "properties": {
-          "stroke": "red",
-          "name": 21
-        },
-        "geometry": {
-          "type": "LineString",
-          "coordinates": [
-            [
-              -82.33861327171326,
-              29.6443533497986
-            ],
-            [
-              -82.3384040594101,
-              29.64441862172132
-            ]
-          ]
-        }
-      },
-      {
-        "type": "Feature",
-        "properties": {
-          "stroke": "red",
-          "name": 21
-        },
-        "geometry": {
-          "type": "LineString",
-          "coordinates": [
-            [
-              -82.33859181404114,
-              29.644647073117635
-            ],
-            [
-              -82.3384040594101,
-              29.644740318436526
-            ]
-          ]
-        }
-      },
-      {
-        "type": "Feature",
-        "properties": {
-          "stroke": "red",
-          "name": 22
-        },
-        "geometry": {
-          "type": "LineString",
-          "coordinates": [
-            [
-              -82.33721315860748,
-              29.643793874439286
-            ],
-            [
-              -82.33705759048462,
-              29.64384515981
-            ]
-          ]
-        }
-      },
-      {
-        "type": "Feature",
-        "properties": {
-          "stroke": "red",
-          "name": 22
-        },
-        "geometry": {
-          "type": "LineString",
-          "coordinates": [
-            [
-              -82.33715951442719,
-              29.64397104197278
-            ],
-            [
-              -82.3369663953781,
-              29.64403165184687
-            ]
-          ]
-        }
-      },
-      {
-        "type": "Feature",
-        "properties": {
-          "stroke": "red",
-          "name": 22
-        },
-        "geometry": {
-          "type": "LineString",
-          "coordinates": [
-            [
-              -82.33688592910765,
-              29.644222805826164
-            ],
-            [
-              -82.33666062355042,
-              29.644124897735768
-            ]
-          ]
-        }
-      },
-      {
-        "type": "Feature",
-        "properties": {
-          "stroke": "red",
-          "name": 22
-        },
-        "geometry": {
-          "type": "LineString",
-          "coordinates": [
-            [
-              -82.33649969100952,
-              29.644232130401246
-            ],
-            [
-              -82.33631193637848,
-              29.644110910857943
-            ]
-          ]
-        }
-      },
-      {
-        "type": "Feature",
-        "properties": {
-          "stroke": "red",
-          "name": 22
-        },
-        "geometry": {
-          "type": "LineString",
-          "coordinates": [
-            [
-              -82.33610808849335,
-              29.644222805826164
-            ],
-            [
-              -82.33591496944427,
-              29.644110910857943
-            ]
-          ]
-        }
-      },
-      {
-        "type": "Feature",
-        "properties": {
-          "stroke": "red",
-          "name": 18
-        },
-        "geometry": {
-          "type": "LineString",
-          "coordinates": [
-            [
-              -82.34136521816254,
-              29.64347217469988
-            ],
-            [
-              -82.3410701751709,
-              29.643789212131555
-            ]
-          ]
-        }
-      },
-      {
-        "type": "Feature",
-        "properties": {
-          "stroke": "red",
-          "name": 18
-        },
-        "geometry": {
-          "type": "LineString",
-          "coordinates": [
-            [
-              -82.34102725982666,
-              29.64346984353861
-            ],
-            [
-              -82.34075903892517,
-              29.643805530207647
-            ]
-          ]
-        }
-      },
-      {
-        "type": "Feature",
-        "properties": {
-          "stroke": "red",
-          "name": 18
-        },
-        "geometry": {
-          "type": "LineString",
-          "coordinates": [
-            [
-              -82.34061151742934,
-              29.643486161666456
-            ],
-            [
-              -82.34043717384338,
-              29.643654005113678
-            ]
-          ]
-        }
-      },
-      {
-        "type": "Feature",
-        "properties": {
-          "stroke": "red",
-          "name": 18
-        },
-        "geometry": {
-          "type": "LineString",
-          "coordinates": [
-            [
-              -82.34011262655258,
-              29.64349781747044
-            ],
-            [
-              -82.3399543762207,
-              29.64366099858456
-            ]
-          ]
-        }
-      },
-      {
-        "type": "Feature",
-        "properties": {
-          "stroke": "brown",
-          "name": 23
-        },
-        "geometry": {
-          "type": "LineString",
-          "coordinates": [
-            [
-              -82.33981490135193,
-              29.643092194698088
-            ],
-            [
-              -82.33961910009384,
-              29.643276356963923
-            ]
-          ]
-        }
-      },
-      {
-        "type": "Feature",
-        "properties": {
-          "stroke": "brown",
-          "name": 23
-        },
-        "geometry": {
-          "type": "LineString",
-          "coordinates": [
-            [
-              -82.33995705842972,
-              29.642677245573363
-            ],
-            [
-              -82.33966469764708,
-              29.64286840212415
-            ]
-          ]
-        }
-      },
-      {
-        "type": "Feature",
-        "properties": {
-          "stroke": "brown",
-          "name": 23
-        },
-        "geometry": {
-          "type": "LineString",
-          "coordinates": [
-            [
-              -82.34005898237228,
-              29.642448789707323
-            ],
-            [
-              -82.33976662158966,
-              29.64256301770515
-            ]
-          ]
-        }
-      },
-      {
-        "type": "Feature",
-        "properties": {
-          "stroke": "brown",
-          "name": 23
-        },
-        "geometry": {
-          "type": "LineString",
-          "coordinates": [
-            [
-              -82.34027355909348,
-              29.64233922395499
-            ],
-            [
-              -82.33998119831085,
-              29.642236651653263
-            ]
-          ]
-        }
-      },
-      {
-        "type": "Feature",
-        "properties": {
-          "stroke": "brown",
-          "name": 23
-        },
-        "geometry": {
-          "type": "LineString",
-          "coordinates": [
-            [
-              -82.34070807695389,
-              29.642159722358397
-            ],
-            [
-              -82.34022527933121,
-              29.642124754477685
-            ]
-          ]
-        }
-      },
-      {
-        "type": "Feature",
-        "properties": {
-          "stroke": "brown",
-          "name": 23
-        },
-        "geometry": {
-          "type": "LineString",
-          "coordinates": [
-            [
-              -82.34129279851913,
-              29.642008194787515
-            ],
-            [
-              -82.34080731868744,
-              29.641963902069875
-            ]
-          ]
-        }
-      },
-      {
-        "type": "Feature",
-        "properties": {
-          "stroke": "brown",
-          "name": 23
-        },
-        "geometry": {
-          "type": "LineString",
-          "coordinates": [
-            [
-              -82.34180778265,
-              29.641744769390694
-            ],
-            [
-              -82.3413947224617,
-              29.641705138961626
-            ]
-          ]
-        }
-      },
-      {
-        "type": "Feature",
-        "properties": {
-          "stroke": "red",
-          "name": 17
-        },
-        "geometry": {
-          "type": "LineString",
-          "coordinates": [
-            [
-              -82.34326153993607,
-              29.64319243496051
-            ],
-            [
-              -82.34294772148131,
-              29.643532784874292
-            ]
-          ]
-        }
-      },
-      {
-        "type": "Feature",
-        "properties": {
-          "stroke": "red",
-          "name": 17
-        },
-        "geometry": {
-          "type": "LineString",
-          "coordinates": [
-            [
-              -82.34290748834609,
-              29.64319243496051
-            ],
-            [
-              -82.34264731407166,
-              29.643537447193907
-            ]
-          ]
-        }
-      },
-      {
-        "type": "Feature",
-        "properties": {
-          "stroke": "red",
-          "name": 17
-        },
-        "geometry": {
-          "type": "LineString",
-          "coordinates": [
-            [
-              -82.34254270792007,
-              29.64319942846348
-            ],
-            [
-              -82.34235495328903,
-              29.643416226814193
-            ]
-          ]
-        }
-      },
-      {
-        "type": "Feature",
-        "properties": {
-          "stroke": "purple",
-          "name": 27
-        },
-        "geometry": {
-          "type": "LineString",
-          "coordinates": [
-            [
-              -82.33979612588882,
-              29.6385906046962
-            ],
-            [
-              -82.33962714672089,
-              29.63874913122216
-            ]
-          ]
-        }
-      },
-      {
-        "type": "Feature",
-        "properties": {
-          "stroke": "purple",
-          "name": 27
-        },
-        "geometry": {
-          "type": "LineString",
-          "coordinates": [
-            [
-              -82.33979612588882,
-              29.638471709637955
-            ],
-            [
-              -82.33948767185211,
-              29.638651217809116
-            ]
-          ]
-        }
-      },
-      {
-        "type": "Feature",
-        "properties": {
-          "stroke": "purple",
-          "name": 27
-        },
-        "geometry": {
-          "type": "LineString",
-          "coordinates": [
-            [
-              -82.33964323997498,
-              29.638376127234455
-            ],
-            [
-              -82.33948767185211,
-              29.63849968495841
-            ]
-          ]
-        }
-      },
-      {
-        "type": "Feature",
-        "properties": {
-          "stroke": "red",
-          "name": 39
-        },
-        "geometry": {
-          "type": "LineString",
-          "coordinates": [
-            [
-              -82.34686374664307,
-              29.650640240363526
-            ],
-            [
-              -82.34678864479065,
-              29.650714832184487
-            ]
-          ]
-        }
-      },
-      {
-        "type": "Feature",
-        "properties": {
-          "stroke": "red",
-          "name": 39
-        },
-        "geometry": {
-          "type": "LineString",
-          "coordinates": [
-            [
-              -82.3467269539833,
-              29.65064257135877
-            ],
-            [
-              -82.34666794538498,
-              29.650710170197303
-            ]
-          ]
-        }
-      },
-      {
-        "type": "Feature",
-        "properties": {
-          "stroke": "red",
-          "name": 39
-        },
-        "geometry": {
-          "type": "LineString",
-          "coordinates": [
-            [
-              -82.34659820795059,
-              29.65064257135877
-            ],
-            [
-              -82.3465096950531,
-              29.650724156158212
-            ]
-          ]
-        }
-      },
-      {
-        "type": "Feature",
-        "properties": {
-          "stroke": "red",
-          "name": 42
-        },
-        "geometry": {
-          "type": "LineString",
-          "coordinates": [
-            [
-              -82.3470166325569,
-              29.651798738344876
-            ],
-            [
-              -82.34684765338898,
-              29.65192227959628
-            ]
-          ]
-        }
-      },
-      {
-        "type": "Feature",
-        "properties": {
-          "stroke": "red",
-          "name": 42
-        },
-        "geometry": {
-          "type": "LineString",
-          "coordinates": [
-            [
-              -82.34672158956528,
-              29.651791745439294
-            ],
-            [
-              -82.34651505947113,
-              29.65192461056183
-            ]
-          ]
-        }
-      },
-      {
-        "type": "Feature",
-        "properties": {
-          "stroke": "red",
-          "name": 42
-        },
-        "geometry": {
-          "type": "LineString",
-          "coordinates": [
-            [
-              -82.34636217355728,
-              29.651798738344876
-            ],
-            [
-              -82.34620928764343,
-              29.65192227959628
-            ]
-          ]
-        }
-      },
-      {
-        "type": "Feature",
-        "properties": {
-          "stroke": "red",
-          "name": 42
-        },
-        "geometry": {
-          "type": "LineString",
-          "coordinates": [
-            [
-              -82.34601885080338,
-              29.65180106931328
-            ],
-            [
-              -82.34588474035263,
-              29.65191994863068
-            ]
-          ]
-        }
-      },
-      {
-        "type": "Feature",
-        "properties": {
-          "stroke": "red",
-          "name": 42
-        },
-        "geometry": {
-          "type": "LineString",
-          "coordinates": [
-            [
-              -82.34570771455763,
-              29.651798738344876
-            ],
-            [
-              -82.34554678201674,
-              29.651926941527332
-            ]
-          ]
-        }
-      },
-      {
-        "type": "Feature",
-        "properties": {
-          "stroke": "red",
-          "name": 42
-        },
-        "geometry": {
-          "type": "LineString",
-          "coordinates": [
-            [
-              -82.34528928995132,
-              29.651805731249926
-            ],
-            [
-              -82.34511226415634,
-              29.651917617665028
-            ]
-          ]
-        }
-      }
     ]
   }
 var name;
+var filterGroup=document.getElementById('filter-group');
 mapboxgl.accessToken = 'pk.eyJ1IjoicmlzaGkzMzMiLCJhIjoiY2puMXE1M2ptMXR0aDNrdG45M3RmNnE5MSJ9.yjNjiHocsYo8_gyTxHDWNw';
 var map = new mapboxgl.Map({
 container: 'map',
-style: 'mapbox://styles/rishi333/cjobvnk7v1l4o2so6l78uxyhr',
+style: 'mapbox://styles/rishi333/cjogk22w553sp2snn2b2x2dda',
 center: [-82.355133, 29.65],
 zoom: 13,
 });
 map.on('load', function () {
-    map.addSource('lotsource', {
-        type: 'vector',
-        url: 'mapbox://rishi333.cjo7f52y101eu2ws1cffwd2xv-48o9u'
+    map.addSource('lots', {
+        type: 'geojson',
+        data: lots1
     });
-    map.addLayer({
-        id: 'lots',
-        type:'fill',
-        source: 'lotsource',
-        paint:{
+    lots1.features.forEach(function(feature){
+      var symbol=feature.properties['color'];
+      var layerID=symbol;
+      name=symbol;
+      if(typeof symbol!=='undefined'){
+      if(!map.getLayer(layerID)){
+        map.addLayer({
+          id:layerID,
+          type:'fill',
+          source:'lots',
+          paint:{
             'fill-color':{
                 type:'identity',
                 property:'fill'
             },
-        },
-        'source-layer':'lotstemp'
-    });
-    map.addLayer({
-        id: 'lotstripes',
-        type:'line',
-        source: 'lotsource',
-        paint:{
-            'line-color':{
-                type:'identity',
-                property:'stroke'
-            },
-        },
-        'source-layer':'lotstemp'
-    });
+          },
+          filter: ["==","color",symbol]
+        });
+        var input = document.createElement('input');
+            input.type = 'checkbox';
+            input.id = layerID;
+            input.checked = true;
+            filterGroup.appendChild(input);
 
-    
-    map.on('click', 'lots', function (e) {
+            var label = document.createElement('label');
+            label.setAttribute('for', layerID);
+            label.textContent = symbol;
+            filterGroup.appendChild(label);
+
+            // When the checkbox changes, update the visibility of the layer.
+            input.addEventListener('change', function(e) {
+                map.setLayoutProperty(layerID, 'visibility',
+                    e.target.checked ? 'visible' : 'none');
+            });
+      }
+    }
+    });
+    map.on('click', 'Orange' , function (e) {
         new mapboxgl.Popup()
             .setLngLat(e.lngLat)
             .setHTML(e.features[0].properties.name)
             .addTo(map);
-        name=e.features[0].properties.name;
-        lots=e;
+            map.flyTo({center: e.lngLat});
+            buildLots(lots1,e.features[0]);
+    });
+    map.on('click', 'Blue' , function (e) {
+      new mapboxgl.Popup()
+          .setLngLat(e.lngLat)
+          .setHTML(e.features[0].properties.name)
+          .addTo(map);
+          map.flyTo({center: e.lngLat});
+          buildLots(lots1,e.features[0]);
+      
+    });
+    map.on('click', 'Red' , function (e) {
+      new mapboxgl.Popup()
+          .setLngLat(e.lngLat)
+          .setHTML(e.features[0].properties.name)
+          .addTo(map);
+          map.flyTo({center: e.lngLat});
+          buildLots(lots1,e.features[0]);
+      
+    });
+    map.on('click', 'Red-One' , function (e) {
+      new mapboxgl.Popup()
+          .setLngLat(e.lngLat)
+          .setHTML(e.features[0].properties.name)
+          .addTo(map);
+          map.flyTo({center: e.lngLat});
+          buildLots(lots1,e.features[0]);
+      
+    });
+    map.on('click', 'Purple' , function (e) {
+      new mapboxgl.Popup()
+          .setLngLat(e.lngLat)
+          .setHTML(e.features[0].properties.name)
+          .addTo(map);
+          map.flyTo({center: e.lngLat});
+          buildLots(lots1,e.features[0]);
+      
+    });
+    map.on('click', 'Brown-Three' , function (e) {
+      new mapboxgl.Popup()
+          .setLngLat(e.lngLat)
+          .setHTML(e.features[0].properties.name)
+          .addTo(map);
+          map.flyTo({center: e.lngLat});
+          buildLots(lots1,e.features[0]);
+      
+    });
+    map.on('click', 'Visitor' , function (e) {
+      new mapboxgl.Popup()
+          .setLngLat(e.lngLat)
+          .setHTML(e.features[0].properties.name)
+          .addTo(map);
+          map.flyTo({center: e.lngLat});
+          buildLots(lots1,e.features[0]);
+      
+    });
+    map.on('click', 'Shands' , function (e) {
+      new mapboxgl.Popup()
+          .setLngLat(e.lngLat)
+          .setHTML(e.features[0].properties.name)
+          .addTo(map);
+          map.flyTo({center: e.lngLat});
+          buildLots(lots1,e.features[0]);
+      
+    });
+    map.on('click', 'Green' , function (e) {
+      new mapboxgl.Popup()
+          .setLngLat(e.lngLat)
+          .setHTML(e.features[0].properties.name)
+          .addTo(map);
+          map.flyTo({center: e.lngLat});
+          buildLots(lots1,e.features[0]);
+      
     });
     map.addControl(new mapboxgl.GeolocateControl({
         positionOptions: {
@@ -2619,16 +1945,19 @@ map.on('load', function () {
         trackUserLocation: true
     }));
     map.addControl(new mapboxgl.NavigationControl());
-    buildLots(lots1);
+    //buildLots(lots1);
 
 });
-
-function buildLots(data) {
-    for (i = 0; i < 42; i++) {
-      var currentFeature = data.features[i];
+function buildLots(data,current) {
+    //for (i = 0; i < 42; i++) {
+      //var currentFeature = data.features[i];
+      var currentFeature=current;
+      i=0;
       var prop = currentFeature.properties;
+      document.getElementById('listings').innerHTML="";
       var listings = document.getElementById('listings');
       var listing = listings.appendChild(document.createElement('div'));
+      //listing.removeChild(listings.childNodes[0])
       listing.className = 'item';
       listing.id = "listing-" + i;
       var link = listing.appendChild(document.createElement('a'));
@@ -2640,17 +1969,9 @@ function buildLots(data) {
       }
 
       var details = listing.appendChild(document.createElement('div'));
-      if(prop.fill=='white' ){
-          for(j=42;j<data.features.length;j++){
-              if(prop.name==data.features[j].properties.name){
-                details.innerHTML= 'Decal Color: '+data.features[j].properties.stroke+ ' one';
-              }
-          }
-      }
-      else{
-        details.innerHTML = 'Decal Color: '+prop.fill;
-      }
+      details.innerHTML = 'Decal Color: '+prop.color;
+      
       var details2=listing.appendChild(document.createElement('div'));
       details2.innerHTML='Percentage Full: '+prop.full;
-    }
+    //}
 }
