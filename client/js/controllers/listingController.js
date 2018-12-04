@@ -1,6 +1,6 @@
-angular.module('listings').controller('ListingsController', ['$scope', 'Listings', 
+angular.module('listings').controller('ListingsController', ['$scope', 'Listings',
   function($scope, Listings) {
-    
+
     Listings.getAll().then(function(response) {
       $scope.listings = response.data;
       console.log("started");
@@ -78,7 +78,7 @@ angular.module('listings').controller('ListingsController', ['$scope', 'Listings
           }
         }
       }
-              
+
       );
         map.on('click', 'Purple' , function (e) {
             new mapboxgl.Popup()
@@ -87,6 +87,7 @@ angular.module('listings').controller('ListingsController', ['$scope', 'Listings
                 .addTo(map);
                 map.flyTo({center: e.lngLat});
                 buildLots(lots1,e.features[0]);
+                $scope.queryFullness(e.features[0].properties.name);
         });
         map.on('click', 'Orange' , function (e) {
           new mapboxgl.Popup()
@@ -95,7 +96,7 @@ angular.module('listings').controller('ListingsController', ['$scope', 'Listings
               .addTo(map);
               map.flyTo({center: e.lngLat});
               buildLots(lots1,e.features[0]);
-          
+              $scope.queryFullness(e.features[0].properties.name);
         });
         map.on('click', 'Red-One' , function (e) {
           new mapboxgl.Popup()
@@ -104,7 +105,7 @@ angular.module('listings').controller('ListingsController', ['$scope', 'Listings
               .addTo(map);
               map.flyTo({center: e.lngLat});
               buildLots(lots1,e.features[0]);
-          
+              $scope.queryFullness(e.features[0].properties.name);
         });
         map.on('click', 'Visitor' , function (e) {
           new mapboxgl.Popup()
@@ -113,7 +114,7 @@ angular.module('listings').controller('ListingsController', ['$scope', 'Listings
               .addTo(map);
               map.flyTo({center: e.lngLat});
               buildLots(lots1,e.features[0]);
-          
+              $scope.queryFullness(e.features[0].properties.name);
         });
         map.on('click', 'Red' , function (e) {
           new mapboxgl.Popup()
@@ -122,7 +123,7 @@ angular.module('listings').controller('ListingsController', ['$scope', 'Listings
               .addTo(map);
               map.flyTo({center: e.lngLat});
               buildLots(lots1,e.features[0]);
-          
+              $scope.queryFullness(e.features[0].properties.name);
         });
         map.on('click', 'Green' , function (e) {
           new mapboxgl.Popup()
@@ -131,7 +132,7 @@ angular.module('listings').controller('ListingsController', ['$scope', 'Listings
               .addTo(map);
               map.flyTo({center: e.lngLat});
               buildLots(lots1,e.features[0]);
-          
+              $scope.queryFullness(e.features[0].properties.name);
         });
         map.on('click', 'Brown-Three' , function (e) {
           new mapboxgl.Popup()
@@ -140,7 +141,7 @@ angular.module('listings').controller('ListingsController', ['$scope', 'Listings
               .addTo(map);
               map.flyTo({center: e.lngLat});
               buildLots(lots1,e.features[0]);
-          
+              $scope.queryFullness(e.features[0].properties.name);
         });
         map.on('click', 'Shands' , function (e) {
           new mapboxgl.Popup()
@@ -149,7 +150,7 @@ angular.module('listings').controller('ListingsController', ['$scope', 'Listings
               .addTo(map);
               map.flyTo({center: e.lngLat});
               buildLots(lots1,e.features[0]);
-          
+              $scope.queryFullness(e.features[0].properties.name);
         });
         map.on('click', 'Blue' , function (e) {
           new mapboxgl.Popup()
@@ -158,7 +159,7 @@ angular.module('listings').controller('ListingsController', ['$scope', 'Listings
               .addTo(map);
               map.flyTo({center: e.lngLat});
               buildLots(lots1,e.features[0]);
-          
+              $scope.queryFullness(e.features[0].properties.name);
         });
         map.addControl(new mapboxgl.GeolocateControl({
             positionOptions: {
@@ -193,16 +194,16 @@ angular.module('listings').controller('ListingsController', ['$scope', 'Listings
 
           var details = listing.appendChild(document.createElement('div'));
           details.innerHTML = 'Decal Color: '+prop.color;
-          
+
           var details2=listing.appendChild(document.createElement('div'));
           details2.innerHTML='Percentage Full: '+prop.full;
         //}
-        
+
       }
       }, function(error) {
         console.log('Unable to retrieve listings:', error);
       });
-      
+
       $scope.addListing = function(full) {
         var newlisting={};
         newlisting.full=full;
@@ -220,22 +221,22 @@ angular.module('listings').controller('ListingsController', ['$scope', 'Listings
 
     $scope.deleteListing = function($index) {
       /**TODO
-         Delete the article using the Listings factory. If the removal is successful, 
-     navigate back to 'listing.list'. Otherwise, display the error. 
+         Delete the article using the Listings factory. If the removal is successful,
+     navigate back to 'listing.list'. Otherwise, display the error.
         */
        if($index!=-1){
          var temp=$scope.listings[$index];
-         
+
          $scope.listings.splice($index,1);
          Listings.delete(temp._id);
        }
        else{
          console.log('unable to delete listing');
        }
-       
- 
+
+
      };
- 
+
      $scope.showDetails = function(index) {
        $scope.detailedInfo = $scope.listings[index];
      };

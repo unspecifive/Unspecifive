@@ -33,7 +33,7 @@
       <div id='map'  style='width: 100%; height: 100%;'>
         <nav id='filter-group' class='filter-group'></nav>
       </div>
-      
+
 
 
       <!-- SIDEBAR -->
@@ -43,18 +43,19 @@
             <h1 class="md-toolbar-tools">Parking Lot Details</h1>
           </md-toolbar>
           <md-content layout-margin>
-            
-            <h4>How full is this parking lot?</h4>
+
+            <span>Percentage Full: </span>
+            <span id="sidebarPercentFull"></span>
             <md-slider-container>
               <span class="md-body-1"></span>
-              <md-slider ng-model="color.red" min="0" max="100" aria-label="red" id="red-slider" class="md-warn">
-                
+              <md-slider ng-model="fullnessSlider" min="0" max="100" aria-label="red" id="red-slider" class="md-warn">
+
               </md-slider>
               <md-input-container>
-                <input type="number" ng-model="color.red" aria-label="red-slider">
+                <input type="number" ng-model="fullnessSlider" aria-label="red-slider">
               </md-input-container>
             </md-slider-container>
-            <md-button type="submit" class="md-accent">Submit</md-button>
+            <md-button ng-click="updateSlider() " type="submit" class="md-accent">Submit</md-button>
             <p>
               Parking lot availability information.
             </p>
@@ -84,14 +85,14 @@
             <md-content layout-margin>
               <form id="login">
                 <div class="form-group">
-                  <label>Username</label>
-                  <input type="text" class="form-control">
+                  <label>Email</label>
+                  <input type="text" class="form-control" ng-model="loginEmail">
                 </div>
                 <div class="form-group">
                   <label>Password</label>
-                  <input type="password" class="form-control">
+                  <input type="password" class="form-control" ng-model="loginPwd">
                 </div>
-                <button type="submit" ng-click="toggleRight()" class="btn btn-default">Submit</button>
+                <button type="submit" ng-click="handleLogin(); toggleRight()" class="btn btn-default">Submit</button>
                 <md-button ng-click="isAccountOpen = !isAccountOpen" class="md-accent">
                   Create Account
                 </md-button>
@@ -109,23 +110,23 @@
               <form name="register">
                 <div class="form-group">
                   <label>Name</label>
-                  <input type="text" class="form-control">
+                  <input type="text" class="form-control" ng-model="signupName">
                 </div>
                 <div class="form-group">
                   <label>Email Address</label>
-                  <input type="email" class="form-control">
+                  <input type="email" class="form-control" ng-model="signupEmail">
                 </div>
                 <div class="form-group">
                   <label>Username</label>
-                  <input type="text" class="form-control">
+                  <input type="text" class="form-control" ng-model="signupUsername">
                 </div>
                 <div class="form-group">
                   <label>Password</label>
-                  <input type="password" class="form-control" name="pwd" ng-model="pwd">
+                  <input type="password" class="form-control" name="pwd" ng-model="signupPwd">
                 </div>
                 <div class="form-group">
                   <label>Parking Decal</label>
-                  <md-select ng-model="decal" placeholder="Decal">
+                  <md-select ng-model="signupDecal" placeholder="Decal">
                     <md-option value="green">Green</md-option>
                     <md-option value="parkAndRide">Park and Ride</md-option>
                     <md-option value="red1">Red 1</md-option>
@@ -147,7 +148,7 @@
                     <md-option value="commercial">Commercial</md-option>
                   </md-select>
                 </div>
-                <button type="submit" ng-click="toggleRight()" class="btn btn-default">Submit</button>
+                <button type="submit" ng-click="handleSignup(); toggleRight()" class="btn btn-default">Submit</button>
                 <md-button ng-click="isAccountOpen = !isAccountOpen" class="md-accent">
                   Login
                 </md-button>

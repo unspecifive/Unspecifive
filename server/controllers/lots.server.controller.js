@@ -4,7 +4,7 @@ const User          = require('../models/userSchema');
 
 
 exports.lotByCode = function(req, res, next, code) {
-    Listing.findOne({code: code}, function(err, lot) {
+    Listing.findOne({name: code}, function(err, lot) {
         if(err) {
             res.status(400).send(err);
         } else {
@@ -15,7 +15,7 @@ exports.lotByCode = function(req, res, next, code) {
 };
 
 exports.getLot = (req, res) => {
-    Listing.findOne({code: req.parkingLot.code}, function(err, lot) {
+    Listing.findOne({name: req.parkingLot.name}, function(err, lot) {
         if(err) {
             res.status(500).send(err);
         } else {
@@ -89,6 +89,20 @@ exports.create = (req, res) => {
     });
 };
 
+exports.updateFullnessOriginal = (req, res) => {
+  var updatedInfo = {
+      full: req.body.percentFull,
+      lastUpdatedByUser: req.user._id,
+      lastUpdated: new Date()
+  };
+  Listing.findOneAndUpdate({name: req.parkingLot.name}, updatedInfo, {new: true}, function (err, lot) {
+      if(err) {
+          res.status(500).send(err);
+      } else {
+          res.json(lot);
+      }
+  });
+}
 
 exports.updateFullness = (req, res) => {
     /*
@@ -117,7 +131,7 @@ exports.updateFullness = (req, res) => {
     else{
       res.json(listings);
     }});
-    
+
 };
 
 exports.list = function(req, res) {
