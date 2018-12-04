@@ -49,7 +49,7 @@ module.exports.init = function() {
   app.use('/api/user', userRouter);
   //app.use('/api/parkingLots', parkingLotsRouter);
 
-  app.use('/api/parkinglots', lotRouter);
+  app.use('/api/listings', lotRouter);
 
   app.route('*', function (req, res) {
     res.sendFile("/index.html");
