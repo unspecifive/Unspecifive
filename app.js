@@ -6,6 +6,20 @@ var app = angular.module('ParkingPickerApp', ['ngMaterial']);
 app.controller('ParkingLotsController', function ($scope, $mdSidenav, $mdDialog) {
     $scope.toggleLeft = buildToggler('left');
     $scope.toggleRight = buildToggler('right');
+    $scope.isLogin = false;
+    $scope.isAccount = false;
+    $scope.setLogin = function(){
+      $scope.isLogin = true;
+    };
+    $scope.setAccount = function(){
+      $scope.isAccount = true;
+    };
+    $scope.resetLogin = function(){
+      $scope.isLogin = false;
+    };
+    $scope.resetAccount = function(){
+      $scope.isAccount = false;
+    };
     $scope.isOpenLeft = function(){
       return $mdSidenav('left').isOpen();
     };
