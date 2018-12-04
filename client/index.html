@@ -20,10 +20,10 @@
       <md-toolbar>
         <h1 class="text-center">UF Parking Picker</h1>
           <div class="text-right">
-            <md-button ng-click="resetLogin(); toggleRight(); setAccount()" class="md-raised">
-              Create Account
+            <md-button ng-click="toggleLeft()" class="md-raised">
+              Toggle Sidenav
             </md-button>
-            <md-button ng-click="toggleRight(); setLogin(); resetAccount()" class="md-raised">
+            <md-button ng-click="toggleRight()" class="md-raised">
               Login
             </md-button>
           </div>
@@ -78,7 +78,7 @@
 
         <!--Login -->
         <md-sidenav class="md-sidenav-right" md-component-id="right" md-disable-backdrop md-whiteframe="4">
-          <div ng-show="isLogin" id="account">
+          <div ng-init="isAccountOpen = true" ng-show="!isAccountOpen" id="account">
             <md-toolbar class="md-theme-indigo">
               <h1 class="md-toolbar-tools">Login</h1>
             </md-toolbar>
@@ -102,7 +102,7 @@
               </md-button>
             </md-content>
           </div>
-          <div ng-show="isAccount" id="account">
+          <div ng-init="isAccountOpen = false" ng-show="isAccountOpen" id="account">
             <md-toolbar class="md-theme-indigo">
               <h1 class="md-toolbar-tools">Create Account</h1>
             </md-toolbar>

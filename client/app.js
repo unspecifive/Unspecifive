@@ -6,23 +6,6 @@ var app = angular.module('ParkingPickerApp', ['ngMaterial']);
 app.controller('ParkingLotsController', function ($scope, $mdSidenav, $mdDialog) {
     $scope.toggleLeft = buildToggler('left');
     $scope.toggleRight = buildToggler('right');
-    $scope.isLogin = false;
-    $scope.isAccount = false;
-    $scope.setLogin = function(){
-      $scope.isLogin = true;
-    };
-    $scope.setAccount = function(){
-      $scope.isAccount = true;
-    };
-    $scope.resetLogin = function(){
-      $scope.isLogin = false;
-    };
-    $scope.resetAccount = function(){
-      $scope.isAccount = false;
-    };
-    $scope.isOpenLeft = function(){
-      return $mdSidenav('left').isOpen();
-    };
     $scope.decalColor = "Any";
     $scope.color = {
       red: Math.floor(Math.random() * 100)
@@ -59,7 +42,7 @@ app.controller('ParkingLotsController', function ($scope, $mdSidenav, $mdDialog)
         }
       };
 
-      url = "http://localhost:8080/api/listings/getLotByCode/" + name;
+      url = "https://unspecifive.herokuapp.com/api/listings/getLotByCode/" + name;
       console.log(url);
 
       xhr.open("GET", url);
@@ -80,7 +63,7 @@ app.controller('ParkingLotsController', function ($scope, $mdSidenav, $mdDialog)
       };
 
       data = 'percentFull=' + $scope.fullnessSlider;
-      url = "http://localhost:8080/api/listings/updateFullness/" + document.getElementById('listings2').innerHTML;
+      url = "https://unspecifive.herokuapp.com/api/listings/updateFullness/" + document.getElementById('listings2').innerHTML;
       console.log(url);
 
       xhr.open("PUT", url);
@@ -104,7 +87,7 @@ app.controller('ParkingLotsController', function ($scope, $mdSidenav, $mdDialog)
 
       data = 'email=' + $scope.loginEmail + '&password=' + $scope.loginPwd;
 
-      xhr.open("POST", "http://localhost:8080/api/user/login", true);
+      xhr.open("POST", "https://unspecifive.herokuapp.com/api/user/login", true);
       xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
       xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
       xhr.setRequestHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
@@ -124,7 +107,7 @@ app.controller('ParkingLotsController', function ($scope, $mdSidenav, $mdDialog)
       var data = 'email=' + $scope.signupEmail + '&username=' + $scope.signupUsername + '&password=' + $scope.signupPwd + '&parkingDecalCode=' + $scope.signupDecal + '&name=' + $scope.signupName;
       console.log(data);
 
-      xhr.open("POST", "http://localhost:8080/api/user/signup");
+      xhr.open("POST", "https://unspecifive.herokuapp.com/api/user/signup");
       xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
       xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
       xhr.setRequestHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
