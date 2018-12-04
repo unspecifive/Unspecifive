@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -14,7 +16,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.10/angular-material.css">
     <link href='https://api.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.css' rel='stylesheet' />
   </head>
-  <body ng-app="ParkingPickerApp" ng-controller="ParkingLotsController" layout="column">
+  <body ng-app="CombineModule" ng-controller="ParkingLotsController" layout="column">
       <md-toolbar>
         <h1 class="text-center">UF Parking Picker</h1>
           <div class="text-right">
@@ -28,24 +30,11 @@
 
       </md-toolbar>
 
-      <div id='map' style='width: 100%; height: 100%;'>
-          <script src="map.js"></script>
+      <div id='map'  style='width: 100%; height: 100%;'>
+        <nav id='filter-group' class='filter-group'></nav>
       </div>
+      
 
-      <!-- Decal Selection Button-->
-      <div class="decal-selection">
-        <div class="dropdown">
-          <button class="dropbtn">{{decalColor}}</button>
-          <div class="dropdown-content">
-            <button ng-click="setDecalColor('Red')">Red</button>
-            <button ng-click="setDecalColor('Blue')">Blue</button>
-            <button ng-click="setDecalColor('Yellow')">Yellow</button>
-            <button ng-click="setDecalColor('Green')">Green</button>
-            <button ng-click="setDecalColor('Orange')">Orange</button>
-            <button ng-click="setDecalColor('Any')">Any</button>
-          </div>
-        </div>
-      </div>
 
       <!-- SIDEBAR -->
       <section layout="row" flex id="content">
@@ -70,6 +59,15 @@
               Parking lot availability information.
             </p>
             <div id='listings' class='listings'></div>
+            <div id='listings2' class='listings2' style="display:none"></div>
+            <div class="container">
+              <div class="row" ng-controller="ListingsController">
+                  <form novalidate class="simple-form">
+                    <h4>Update a Parking Lot's Availability</h4>
+                    New Lot Full Percentage: <input type="text" ng-model="newListing.full" /><br />
+                    <button class="btn btn-primary" ng-click="addListing(newListing.full)">Update Listing</button>
+                  </form>
+            </div>
             <md-button ng-click="toggleLeft()" class="md-accent">
               Close this window
             </md-button>
@@ -166,6 +164,7 @@
 
       </section>
 
-
+      <script src="js/factories/listingFactory.js"></script>
+      <script src="js/controllers/listingController.js"></script>
   </body>
 </html>

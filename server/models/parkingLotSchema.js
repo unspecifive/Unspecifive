@@ -1,16 +1,21 @@
 var mongoose = require('mongoose'),
     Schema = mongoose.Schema;
 
-var parkingLotSchema = new Schema({
+var listingSchema = new Schema({
     name: {
-        type: String,
+        type: Number,
         required: true
     },
-    code: {
+    
+    color: {
         type: String,
         required: true,
-        unique: true
     },
+    fill: {
+        type: String,
+        required: true,
+    },
+    /*
     parkingRules: [{//map decal code to time period it is allowed
         decal: [{
             type: String,
@@ -26,7 +31,9 @@ var parkingLotSchema = new Schema({
         }
     }],
     decals: [String],
-    percentFull: {
+    */
+    
+    full: {
         type: Number,
         min: 0,
         max: 100,
@@ -53,9 +60,10 @@ var parkingLotSchema = new Schema({
             coordinates:[[[]]]
         }
     }
+    
 });
 
 
-var ParkingLot = mongoose.model('ParkingLot', parkingLotSchema);
+var Listing = mongoose.model('Listing', listingSchema);
 
-module.exports = ParkingLot;
+module.exports = Listing;
