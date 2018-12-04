@@ -88,6 +88,9 @@ angular.module('listings').controller('ListingsController', ['$scope', 'Listings
                 map.flyTo({center: e.lngLat});
                 buildLots(lots1,e.features[0]);
                 $scope.queryFullness(e.features[0].properties.name);
+          if($scope.isOpenLeft() == false){
+              $scope.toggleLeft();
+            } 
         });
         map.on('click', 'Orange' , function (e) {
           new mapboxgl.Popup()
@@ -97,6 +100,9 @@ angular.module('listings').controller('ListingsController', ['$scope', 'Listings
               map.flyTo({center: e.lngLat});
               buildLots(lots1,e.features[0]);
               $scope.queryFullness(e.features[0].properties.name);
+          if($scope.isOpenLeft() == false){
+              $scope.toggleLeft();
+            }   
         });
         map.on('click', 'Red-One' , function (e) {
           new mapboxgl.Popup()
@@ -106,6 +112,9 @@ angular.module('listings').controller('ListingsController', ['$scope', 'Listings
               map.flyTo({center: e.lngLat});
               buildLots(lots1,e.features[0]);
               $scope.queryFullness(e.features[0].properties.name);
+          if($scope.isOpenLeft() == false){
+              $scope.toggleLeft();
+            }   
         });
         map.on('click', 'Visitor' , function (e) {
           new mapboxgl.Popup()
@@ -115,6 +124,9 @@ angular.module('listings').controller('ListingsController', ['$scope', 'Listings
               map.flyTo({center: e.lngLat});
               buildLots(lots1,e.features[0]);
               $scope.queryFullness(e.features[0].properties.name);
+          if($scope.isOpenLeft() == false){
+              $scope.toggleLeft();
+            }   
         });
         map.on('click', 'Red' , function (e) {
           new mapboxgl.Popup()
@@ -124,6 +136,9 @@ angular.module('listings').controller('ListingsController', ['$scope', 'Listings
               map.flyTo({center: e.lngLat});
               buildLots(lots1,e.features[0]);
               $scope.queryFullness(e.features[0].properties.name);
+          if($scope.isOpenLeft() == false){
+              $scope.toggleLeft();
+            }     
         });
         map.on('click', 'Green' , function (e) {
           new mapboxgl.Popup()
@@ -133,6 +148,9 @@ angular.module('listings').controller('ListingsController', ['$scope', 'Listings
               map.flyTo({center: e.lngLat});
               buildLots(lots1,e.features[0]);
               $scope.queryFullness(e.features[0].properties.name);
+          if($scope.isOpenLeft() == false){
+              $scope.toggleLeft();
+            }   
         });
         map.on('click', 'Brown-Three' , function (e) {
           new mapboxgl.Popup()
@@ -142,6 +160,9 @@ angular.module('listings').controller('ListingsController', ['$scope', 'Listings
               map.flyTo({center: e.lngLat});
               buildLots(lots1,e.features[0]);
               $scope.queryFullness(e.features[0].properties.name);
+          if($scope.isOpenLeft() == false){
+              $scope.toggleLeft();
+            } 
         });
         map.on('click', 'Shands' , function (e) {
           new mapboxgl.Popup()
@@ -151,8 +172,12 @@ angular.module('listings').controller('ListingsController', ['$scope', 'Listings
               map.flyTo({center: e.lngLat});
               buildLots(lots1,e.features[0]);
               $scope.queryFullness(e.features[0].properties.name);
+          if($scope.isOpenLeft() == false){
+              $scope.toggleLeft();
+            }   
         });
         map.on('click', 'Blue' , function (e) {
+
           new mapboxgl.Popup()
               .setLngLat(e.lngLat)
               .setHTML(e.features[0].properties.name)
@@ -160,6 +185,10 @@ angular.module('listings').controller('ListingsController', ['$scope', 'Listings
               map.flyTo({center: e.lngLat});
               buildLots(lots1,e.features[0]);
               $scope.queryFullness(e.features[0].properties.name);
+          if(toggled == false){
+              $scope.toggleLeft();
+              toggled = true;
+            }    
         });
         map.addControl(new mapboxgl.GeolocateControl({
             positionOptions: {
