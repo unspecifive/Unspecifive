@@ -4,6 +4,18 @@
 var app = angular.module('ParkingPickerApp', ['ngMaterial']);
 
 app.controller('ParkingLotsController', function ($scope, $mdSidenav, $mdDialog) {
+    $scope.showMoreInfo = function(ev) {
+      $mdDialog.show(
+        $mdDialog.alert()
+          .parent(angular.element(document.querySelector('#showMoreInfo')))
+          .clickOutsideToClose(true)
+          .title('Update Parking Lot Fullness')
+          .textContent('How full does this parking lot look right now?')
+          .ariaLabel('How full does this parking lot look right now?')
+          .ok('OK')
+          .targetEvent(ev)
+      );
+    };
     $scope.toggleLeft = buildToggler('left');
     $scope.toggleRight = buildToggler('right');
     $scope.isLogin = false;
@@ -75,6 +87,7 @@ app.controller('ParkingLotsController', function ($scope, $mdSidenav, $mdDialog)
       xhr.onreadystatechange = function() {
         if (xhr.readyState === 4) {
           document.getElementById('sidebarPercentFull').innerText = JSON.parse(xhr.responseText).full;
+          document.getElementById('lastUpdated').innerText = JSON.parse(xhr.responseText).lastUpdated;
           console.log(xhr.responseText);
         }
       };

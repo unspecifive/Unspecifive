@@ -1,12 +1,10 @@
 angular.module('listings').controller('ListingsController', ['$scope', 'Listings',
-  function($scope, Listings) {
+  function($scope,  Listings) {
 
     Listings.getAll().then(function(response) {
       $scope.listings = response.data;
       console.log("started");
-      //var json=JSON.stringify(response.data);
       var json=response.data;
-      //var lots1 = JSON.parse(lotsFile);
       var geojson={
         "type":"FeatureCollection",
         features:[],
@@ -201,33 +199,24 @@ angular.module('listings').controller('ListingsController', ['$scope', 'Listings
 
         });
       function buildLots(data,current) {
-        //for (i = 0; i < 42; i++) {
-          //var currentFeature = data.features[i];
           var currentFeature=current;
           i=0;
           var prop = currentFeature.properties;
-          document.getElementById('listings').innerHTML="";
-          var listings = document.getElementById('listings');
-          var listing = listings.appendChild(document.createElement('div'));
-          //listing.removeChild(listings.childNodes[0])
-          listing.className = 'item';
-          listing.id = "listing-" + i;
-          var link = listing.appendChild(document.createElement('a'));
-          link.href = '#';
-          link.className = 'title';
-          link.dataPosition = i;
+          document.getElementById('listing-title').innerHTML="";
+          document.getElementById('listing-details').innerHTML="";
+          var listingDetails = document.getElementById('listing-details');
+          var listingTitle = document.getElementById('listing-title');
+          var title = listingTitle.appendChild(document.createElement('a'));
+          title.className = 'item';
+          title.id = "listing-" + i;
+          title.href = '#';
+          title.className = 'title';
+          title.dataPosition = i;
           if(currentFeature.geometry.type=='Polygon'){
-            link.innerHTML ='Parking Lot Number '+prop.name;
+            title.innerHTML ='<h3>Parking Lot #'+prop.name + '</h3>';
           }
-          document.getElementById('listings2').innerHTML=prop.name;
-
-          var details = listing.appendChild(document.createElement('div'));
-          details.innerHTML = 'Decal Color: '+prop.color;
-
-          var details2=listing.appendChild(document.createElement('div'));
-          details2.innerHTML='Percentage Full: '+prop.full;
-        //}
-
+          var decal = listingDetails.appendChild(document.createElement('li'));
+          decal.innerHTML += ('<strong>Decal:</strong> '+prop.color);
       }
       }, function(error) {
         console.log('Unable to retrieve listings:', error);

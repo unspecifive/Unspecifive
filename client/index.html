@@ -13,6 +13,7 @@
     <script src="app.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.10/angular-material.css">
     <link href='https://api.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.css' rel='stylesheet' />
   </head>
@@ -27,52 +28,50 @@
               Login
             </md-button>
           </div>
-
       </md-toolbar>
-
       <div id='map'  style='width: 100%; height: 100%;'>
         <nav id='filter-group' class='filter-group'></nav>
       </div>
 
-
-
-      <!-- SIDEBAR -->
       <section layout="row" flex id="content">
+         <!-- SIDEBAR -->
         <md-sidenav class="md-sidenav-left" md-component-id="left" md-disable-backdrop md-whiteframe="4">
-          <md-toolbar class="md-theme-indigo">
-            <h1 class="md-toolbar-tools">Parking Lot Details</h1>
-          </md-toolbar>
-          <md-content layout-margin>
-
-            <span>Percentage Full: </span>
-            <span id="sidebarPercentFull"></span>
-            <md-slider-container>
-              <span class="md-body-1"></span>
-              <md-slider ng-model="fullnessSlider" min="0" max="100" aria-label="red" id="red-slider" class="md-warn">
-
-              </md-slider>
-              <md-input-container>
-                <input type="number" ng-model="fullnessSlider" aria-label="red-slider">
-              </md-input-container>
-            </md-slider-container>
-            <md-button ng-click="updateSlider() " type="submit" class="md-accent">Submit</md-button>
-            <p>
-              Parking lot availability information.
-            </p>
-            <div id='listings' class='listings'></div>
-            <div id='listings2' class='listings2' style="display:none"></div>
-            <div class="container">
-              <div class="row" ng-controller="ListingsController">
-                  <form novalidate class="simple-form">
-                    <h4>Update a Parking Lot's Availability</h4>
-                    New Lot Full Percentage: <input type="text" ng-model="newListing.full" /><br />
-                    <button class="btn btn-primary" ng-click="addListing(newListing.full)">Update Listing</button>
-                  </form>
-              </div>
+          <md-content class="sidenav" layout-margin>
+            <div class="row" ng-controller="ListingsController">
+              <a id="listing-title" href=""></a>
+              <hr>
+                <div id='listings' class="listings">
+                  <ul>
+                    <li>
+                      <span><strong>Percentage Full: </strong></span>
+                      <span id="sidebarPercentFull"></span>
+                    </li>
+                    <li>
+                      <span><strong>Last Update: </strong></span>
+                      <span id="lastUpdated"></span>
+                    </li>
+                  </ul>
+                  <ul id="listing-details">
+                  </ul>
+                </div>
             </div>
-            <md-button ng-click="toggleLeft()" class="md-accent">
-              Close this window
-            </md-button>
+            <hr>
+            <div id='listings2' class='listings2' style="display:none"></div>
+            <!-- SLIDER -->
+            <div class="slider text-center">
+              <h4>Update Fullness Percentage <i class="fas fa-info-circle" ng-click="showMoreInfo($event)" ></i></h4>
+              <md-slider-container>
+                <md-slider ng-model="fullnessSlider" min="0" max="100" aria-label="red" id="red-slider" class="md-warn">
+                </md-slider>
+                <md-input-container>
+                  <input type="number" ng-model="fullnessSlider" aria-label="red-slider">
+                </md-input-container>
+              </md-slider-container>
+              <md-button class="pull-right" ng-click="updateSlider() " type="submit" class="md-accent">Submit</md-button>
+            </div>
+            <div class="close-btn">
+              <md-button ng-click="toggleLeft()" class="md-accent">Close this window</md-button>
+            </div>
           </md-content>
         </md-sidenav>
 

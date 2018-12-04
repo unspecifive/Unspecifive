@@ -10,6 +10,11 @@ body {
   margin:0; padding:0;
 }
 
+ul {
+  margin: 0; /* To remove default bottom margin */ 
+  padding: 0; /* To remove default left padding */
+}
+
 #map {
   left:7.5px;
 }
@@ -25,6 +30,12 @@ body {
 
 .text-right {
   text-align: right;
+}
+
+.close-btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
 .decal-selection {
@@ -95,6 +106,16 @@ body {
   background-color: #fdfdfd;
 }
 
+.md-sidenav-left {
+  height: calc(100% - 101.52px);
+  position: absolute;
+  right: auto !important;
+  top: auto !important;
+  bottom:0px;
+  left: 0px;
+  
+}
+
 .filter-group {
   font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-weight: 600;
@@ -134,4 +155,16 @@ body {
  .filter-group input[type=checkbox]:checked + label:before {
    content: '\272A';
   margin-right: 5px;
+}
+
+.sidenav {
+  height: 100%;
+}
+
+.slider {
+  margin-top: 20px;
+}
+
+li {
+  margin-bottom: 15px;
 }
