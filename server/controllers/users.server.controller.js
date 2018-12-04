@@ -35,11 +35,12 @@ exports.create = (req, res) => {
                             res.status(500).json({
                                 error: err
                             });
+                        } else {
+                          console.log(result);
+                          res.status(201).json({
+                              message: 'User created'
+                          });
                         }
-                        console.log(result);
-                        res.status(201).json({
-                            message: 'User created'
-                        });
 
                     })
                 }
@@ -84,7 +85,7 @@ exports.login = (req, res) => {
                 );
                 return res.status(200).json({
                     message: 'Authentication succeeded',
-                    token: token 
+                    token: token
                 });
             }
             // Password was incorrect
