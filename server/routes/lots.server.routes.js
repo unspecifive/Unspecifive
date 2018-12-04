@@ -10,14 +10,15 @@ const express   = require('express'),
  router.route('/getLotByCode/:lotCode')
      .get(listings.getLot);
 
+router.route('/')
+    .get(listings.list)
+    .post(listings.updateFullness);
+
 //anything declared after the following line will use the token authentication/parsing thing
 router.use(users.authenticate_token);
 router.route('/updateFullness/:lotCode')
     .put(listings.updateFullnessOriginal);
 
-router.route('/')
-    .get(listings.list)
-    .post(listings.updateFullness);
 
 router.route('/create')
     .post(listings.create);
