@@ -43,8 +43,10 @@
                 <div id='listings' class="listings">
                   <ul>
                     <li>
-                      <span><strong>Percentage Full: </strong></span>
-                      <span id="sidebarPercentFull"> {{ sidebarPercentFull}}</span>
+                      
+                      <span><strong>Fullness: </strong></span>
+                      <span id="sidebarPercentFull"> {{ sidebarPercentFull}} %</span>
+                      <md-progress-linear md-mode="determinate" value="{{sidebarPercentFull}}"></md-progress-linear>
                     </li>
                     <li>
                       <span><strong>Last Update: </strong></span>

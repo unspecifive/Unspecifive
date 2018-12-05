@@ -212,6 +212,7 @@ angular.module('listings').controller('ListingsController', ['$scope', 'Listings
           title.href = '#';
           title.className = 'title';
           title.dataPosition = i;
+          title.style.color = '#0021A5';
           if(currentFeature.geometry.type=='Polygon'){
             title.innerHTML ='<h3>Parking Lot #'+prop.name + '</h3>';
           }
