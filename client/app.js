@@ -66,8 +66,10 @@ app.controller('ParkingLotsController', function ($scope, $mdSidenav, $mdDialog)
 
       xhr.onreadystatechange = function() {
         if (xhr.readyState === 4) {
-          document.getElementById('sidebarPercentFull').innerText = JSON.parse(xhr.responseText).full;
-          console.log(xhr.responseText);
+          $scope.$apply(function () {
+            $scope.sidebarPercentFull = JSON.parse(xhr.responseText).full;
+            $scope.lastUpdated = new Date(JSON.parse(xhr.responseText).lastUpdated);
+        });
         }
       };
 
@@ -86,12 +88,13 @@ app.controller('ParkingLotsController', function ($scope, $mdSidenav, $mdDialog)
 
       xhr.onreadystatechange = function() {
         if (xhr.readyState === 4) {
-          document.getElementById('sidebarPercentFull').innerText = JSON.parse(xhr.responseText).full;
-          document.getElementById('lastUpdated').innerText = JSON.parse(xhr.responseText).lastUpdated;
-          console.log(xhr.responseText);
+          $scope.$apply(function () {
+            $scope.sidebarPercentFull = JSON.parse(xhr.responseText).full;
+            $scope.lastUpdated = new Date(JSON.parse(xhr.responseText).lastUpdated);
+          });
         }
       };
-
+      
       data = 'percentFull=' + $scope.fullnessSlider;
       url = "https://unspecifive.herokuapp.com/api/listings/updateFullness/" + document.getElementById('listings2').innerHTML;
       console.log(url);
