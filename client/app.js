@@ -89,6 +89,7 @@ app.controller('ParkingLotsController', function ($scope, $mdSidenav, $mdDialog)
       xhr.onreadystatechange = function() {
         if (xhr.readyState === 4) {
           $scope.$apply(function () {
+            console.log(xhr.responseText)
             $scope.sidebarPercentFull = JSON.parse(xhr.responseText).full;
             $scope.lastUpdated = new Date(JSON.parse(xhr.responseText).lastUpdated);
           });

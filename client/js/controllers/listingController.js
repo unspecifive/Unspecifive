@@ -216,6 +216,7 @@ angular.module('listings').controller('ListingsController', ['$scope', 'Listings
           if(currentFeature.geometry.type=='Polygon'){
             title.innerHTML ='<h3>Parking Lot #'+prop.name + '</h3>';
           }
+          document.getElementById('listings2').innerHTML=prop.name;
           var decal = listingDetails.appendChild(document.createElement('li'));
           decal.innerHTML += ('<strong>Decal:</strong> '+prop.color);
       }
