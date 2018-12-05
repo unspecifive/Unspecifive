@@ -73,7 +73,7 @@ app.controller('ParkingLotsController', function ($scope, $mdSidenav, $mdDialog)
         }
       };
 
-      url = "https://unspecifive.herokuapp.com/api/listings/getLotByCode/" + name;
+      url = "http://localhost:8080/api/listings/getLotByCode/" + name;
       console.log(url);
 
       xhr.open("GET", url);
@@ -89,6 +89,7 @@ app.controller('ParkingLotsController', function ($scope, $mdSidenav, $mdDialog)
       xhr.onreadystatechange = function() {
         if (xhr.readyState === 4) {
           $scope.$apply(function () {
+            console.log(xhr.responseText)
             $scope.sidebarPercentFull = JSON.parse(xhr.responseText).full;
             $scope.lastUpdated = new Date(JSON.parse(xhr.responseText).lastUpdated);
           });
@@ -96,7 +97,7 @@ app.controller('ParkingLotsController', function ($scope, $mdSidenav, $mdDialog)
       };
       
       data = 'percentFull=' + $scope.fullnessSlider;
-      url = "https://unspecifive.herokuapp.com/api/listings/updateFullness/" + document.getElementById('listings2').innerHTML;
+      url = "http://localhost:8080/api/listings/updateFullness/" + document.getElementById('listings2').innerHTML;
       console.log(url);
 
       xhr.open("PUT", url);
@@ -120,7 +121,7 @@ app.controller('ParkingLotsController', function ($scope, $mdSidenav, $mdDialog)
 
       data = 'email=' + $scope.loginEmail + '&password=' + $scope.loginPwd;
 
-      xhr.open("POST", "https://unspecifive.herokuapp.com/api/user/login", true);
+      xhr.open("POST", "http://localhost:8080/api/user/login", true);
       xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
       xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
       xhr.setRequestHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
@@ -140,7 +141,7 @@ app.controller('ParkingLotsController', function ($scope, $mdSidenav, $mdDialog)
       var data = 'email=' + $scope.signupEmail + '&username=' + $scope.signupUsername + '&password=' + $scope.signupPwd + '&parkingDecalCode=' + $scope.signupDecal + '&name=' + $scope.signupName;
       console.log(data);
 
-      xhr.open("POST", "https://unspecifive.herokuapp.com/api/user/signup");
+      xhr.open("POST", "http://localhost:8080/api/user/signup");
       xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
       xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
       xhr.setRequestHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
