@@ -143,19 +143,19 @@ ul {
   display: none;
 }
  .filter-group input[type=checkbox] + label {
-  background-color: #a501b4;
+  background-color: orange;
   display: block;
   cursor: pointer;
   padding: 10px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.25);
 }
  .filter-group input[type=checkbox] + label {
-  background-color: #a501b4;
+  background-color: orange;
   text-transform: capitalize;
 }
  .filter-group input[type=checkbox] + label:hover,
 .filter-group input[type=checkbox]:checked + label {
-  background-color:  #a501b4;
+  background-color:  orange;
 }
  .filter-group input[type=checkbox]:checked + label:before {
    content: '\272A';
