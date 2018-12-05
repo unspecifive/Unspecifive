@@ -1,3 +1,8 @@
+* {
+
+  box-sizing: border-box;
+}
+
 #searchBar {
   margin: 15px 10px;
 }
@@ -107,7 +112,7 @@ ul {
 }
 
 .md-sidenav-left {
-  height: calc(100% - 101.52px);
+  height: calc(100% - 101.1px);
   position: absolute;
   right: auto !important;
   top: auto !important;
@@ -138,19 +143,19 @@ ul {
   display: none;
 }
  .filter-group input[type=checkbox] + label {
-  background-color: #a501b4;
+  background-color: #E28F41;
   display: block;
   cursor: pointer;
   padding: 10px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.25);
 }
  .filter-group input[type=checkbox] + label {
-  background-color: #a501b4;
+  background-color: #E28F41;
   text-transform: capitalize;
 }
  .filter-group input[type=checkbox] + label:hover,
 .filter-group input[type=checkbox]:checked + label {
-  background-color:  #a501b4;
+  background-color:  #E28F41;
 }
  .filter-group input[type=checkbox]:checked + label:before {
    content: '\272A';

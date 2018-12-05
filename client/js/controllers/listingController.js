@@ -31,8 +31,8 @@ angular.module('listings').controller('ListingsController', ['$scope', 'Listings
       var map = new mapboxgl.Map({
       container: 'map',
       style: 'mapbox://styles/rishi333/cjogk22w553sp2snn2b2x2dda',
-      center: [-82.355133, 29.65],
-      zoom: 13,
+      center: [-82.3450734, 29.645],
+      zoom: 14,
       });
       map.on('load', function () {
         map.addSource('lots', {
@@ -212,6 +212,7 @@ angular.module('listings').controller('ListingsController', ['$scope', 'Listings
           title.href = '#';
           title.className = 'title';
           title.dataPosition = i;
+          title.style.color = '#0021A5';
           if(currentFeature.geometry.type=='Polygon'){
             title.innerHTML ='<h3>Parking Lot #'+prop.name + '</h3>';
           }

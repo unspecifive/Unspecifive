@@ -43,12 +43,14 @@
                 <div id='listings' class="listings">
                   <ul>
                     <li>
-                      <span><strong>Percentage Full: </strong></span>
-                      <span id="sidebarPercentFull"></span>
+                      
+                      <span><strong>Fullness: </strong></span>
+                      <span id="sidebarPercentFull"> {{ sidebarPercentFull}} %</span>
+                      <md-progress-linear md-mode="determinate" value="{{sidebarPercentFull}}"></md-progress-linear>
                     </li>
                     <li>
                       <span><strong>Last Update: </strong></span>
-                      <span id="lastUpdated"></span>
+                      <span id="lastUpdated">{{lastUpdated  | date:'M/d/yyyy h:mm:ssa'}}</span>
                     </li>
                   </ul>
                   <ul id="listing-details">
@@ -92,9 +94,6 @@
                   <input type="password" class="form-control" ng-model="loginPwd">
                 </div>
                 <button type="submit" ng-click="handleLogin(); toggleRight()" class="btn btn-default">Submit</button>
-                <md-button ng-click="isAccountOpen = !isAccountOpen" class="md-accent">
-                  Create Account
-                </md-button>
               </form>
               <md-button ng-click="toggleRight()" class="md-accent">
                 Close this window
@@ -148,9 +147,6 @@
                   </md-select>
                 </div>
                 <button type="submit" ng-click="handleSignup(); toggleRight()" class="btn btn-default">Submit</button>
-                <md-button ng-click="isAccountOpen = !isAccountOpen" class="md-accent">
-                  Login
-                </md-button>
               </form>
               <md-button ng-click="toggleRight()" class="md-accent">
                 Close this window
